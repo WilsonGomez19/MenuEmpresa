@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Superior</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-image: url(img/moto.avif);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        .hamburguesa {
+            display: none;
+            cursor: pointer;
+            font-size: 25px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1100;
+        }
+
+        .menu-movil {
+            display: none;
+            flex-direction: column;
+            background-color: #333;
+            position: fixed;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .menu-movil a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .menu-movil a:hover {
+            background-color: #575757;
+        }
+
+        @media (max-width: 768px) {
+            .hamburguesa {
+                display: block;
+            }
+            .menu {
+                display: flex; /* Ahora la barra se mantiene visible en pantallas pequeñas */
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img scr="logo.png " alt="MOTOFAST"
+        </div>
+        <div class="menu-moto" onclick="document.queryselector('.navbar').classlist.toggle('active')">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href= "ace.html">inicio</a></li></ul>
+                <li><a href= "servicios.html">servicios</a></li>
+                <li><a href= "contactos.html">contactos</a></li>
+                <li><a href= "ubicacion.html">ubicacion</a></li>
+        </nav>
+    </header>
+    <div style="margin-top: 50px; padding: 20px;">
+        <h1>MOTOFAST</h1>
+        <p>ALMACÉN DE MOTOCICLETAS</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menuMovil");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "flex";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
